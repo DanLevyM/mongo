@@ -1,0 +1,8 @@
+use("db")
+db.createCollection("col1")
+db.col1.insertOne({title: "foo"})
+db.col1.insertMany([{firstName: 'will'}, {firstName: 'bob'}]);
+
+db.col1.deleteOne({firstnnName: 'bob'})
+db.col1.update({title: 'foo'}, {$set: {title: 'will3'}});
+
